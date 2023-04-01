@@ -140,7 +140,7 @@ body {
 
 
 .background_section {
-    background: linear-gradient(rgba(0, 0, 0, 0.509), rgba(168, 135, 222, 0.425)), url(/pics/bg.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.509), rgba(168, 135, 222, 0.425)), url(./pics/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -199,7 +199,7 @@ body {
     height: 100%;
     width: 80%;
 
-    background: url(/pics/bigV.png);
+    background: url(./pics/bigV.png);
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: 50% 40%;
