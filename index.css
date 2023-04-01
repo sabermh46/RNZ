@@ -507,15 +507,18 @@ div.hudai {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.4s;
 }
+.link_construction .r:hover {
+    background: rgb(255, 255, 255);
+}
+
 .link_construction .r img {
     width: 40px;
     position: absolute;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
-
-
 }
 .link_construction .l {
     color: rgb(255, 220, 192);
