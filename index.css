@@ -588,6 +588,11 @@ div.hudai {
 }
 .section4 .main4 {
     position: relative;
+    background: url(./pics/CRANE.png);
+    background-repeat: no-repeat;
+    background-position: 20% 80%;
+    background-attachment: fixed;
+    background-size: 300px;
 }
 
 .floating2 {
