@@ -527,3 +527,89 @@ div.hudai {
 .link_construction .l {
     color: rgb(255, 220, 192);
 }
+
+
+
+
+
+
+
+
+
+.development_section {
+    display: flex;
+    gap: 30px;
+}
+.development_section .left {
+    position: sticky;
+    top: 160px;
+    align-self: flex-start;
+    flex: 4;
+}
+.development_section .left .project_title {
+    font-size: 28px;
+    font-family: var(--poppins);
+    color: var(--section-lime-light);
+    font-weight: 600;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.381);
+}
+.development_section .left .project_sub_title {
+    font-size: 18px;
+    font-family: var(--poppins);
+    color: var(--section-lime-light);
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.381);
+}
+
+
+.development_section .right {
+    flex: 5;
+}
+.development_section .right .pics {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    background: var(--section-lime-light);
+}
+.development_section .right .pics img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.446);
+}
+
+
+.section4 {
+    background: var(--section-lime);
+    padding-top: 90px;
+}
+.section4 .main4 {
+    position: relative;
+}
+
+.floating2 {
+    height: 50px;
+    width: max-content;
+    padding: 5px 25px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-family: var(--poppins);
+    color: var(--section-lime);
+    background: var(--section-lime-light);
+    font-size: 30px;
+    border-radius: 200px;
+    line-height: 42px;
+    position: sticky;
+    top: 90px;
+    z-index: 99;
+}
+
+.section4 .main4 .subheading {
+    font-family: var(--poppins);
+    color: var(--section-lime-light);
+    margin-top: 30px;
+    letter-spacing: 3px;
+}
