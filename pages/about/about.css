@@ -1,0 +1,103 @@
+
+
+.background_section::after, .background_section::before {
+    content: none !important;
+}
+
+
+.bg_bg {
+    display: flex;
+    justify-content: space-between;
+    width: var(--max-width);
+    min-width: 300px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bg_bg div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.bg_bg .image_in_left img {
+    width: 80%;
+}
+.bg_bg .head_in_right {
+    font-size: 100px;
+    font-family: var(--poppins);
+    color: rgba(255, 255, 255, 0.591);
+    text-transform: uppercase;
+    font-weight: 900;
+    /* text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.282); */
+    justify-content: flex-end;
+}
+
+
+
+
+
+.owers_card {
+    background: linear-gradient(45deg,#f3eae2 40%, #e6b385);
+
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    padding: 30px 40px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.owers_card .post {
+    position: absolute;
+    background: rgba(249, 118, 0, 0.6);
+    border: 1px solid rgba(249, 118, 0, 1);
+    border-top:  1px solid transparent;
+    border-radius: 0 0 20px 20px;
+    right: 20px;
+    top: 0px;
+    color: white;
+    font-family: var(--poppins);
+    text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgba(94, 94, 94, 0.37);
+    letter-spacing: 2px;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.owers_card .image {
+    height: 250px;
+}
+.owers_card .image img {
+    height: 100%;
+}
+.owers_card .details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    gap: 20px;
+}
+.details .title {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--orange);
+    text-shadow: 0px 2px 2px rgba(94, 94, 94, 0.37);
+}
+.details .mid {
+    color: #777777;
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.details .message {
+    color: #2d2d2d;
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
