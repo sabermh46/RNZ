@@ -72,6 +72,12 @@
                             <div class="icon_item">
                                 CLEANING
                                 <div>
+                                    <img src="./pics/icons/icon_8.png" alt="">
+                                </div>
+                            </div>
+                            <div class="icon_item">
+                                RESTAURANT
+                                <div>
                                     <img src="./pics/icons/icon_3.png" alt="">
                                 </div>
                             </div>
@@ -86,12 +92,6 @@
                                 FLIGHT TICKET BOOKING &nbsp;
                                 <div>
                                     <img src="./pics/icons/icon_5.png" alt="">
-                                </div>
-                            </div>
-                            <div class="icon_item">
-                                RESTAURANT
-                                <div>
-                                    <img src="./pics/icons/icon_3.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -422,11 +422,161 @@
 
         </div>
     </div>
+
+    <div class="section5 g_services">
+            <div class="the_air_frame">
+                <img src="./pics/icons/normal_cloud.png" alt="" class="cl1">
+                <img src="./pics/icons/small_cloud.png" alt="" class="cl2">
+                <img src="./pics/icons/plane.png" alt="" class="plane">
+                <img src="./pics/icons/normal_cloud.png" alt="" class="cl3">
+            </div>
+
+        <div class="container" style="position: sticky; top: 90px;">
+            <div class="head5">
+                Our Golden Services
+            </div>
+            <div class="head5sub">
+                We Provide -
+            </div>
+            <div class="mkDir">
+                <div class="directory">
+                    <div class="head5details files">
+                        Cleaning services
+                    </div>
+                    <div class="head5details files">
+                        Restaurent services
+                    </div>
+                    <div class="head5details files">
+                        man-power supply for
+                    </div>
+                    <div class="mkDir">
+                        <div class="directory">
+                            <div class="sub_head5details files">
+                                Manufacturing Sector
+                            </div>
+                            <div class="sub_head5details files">
+                                Service Sector
+                            </div>
+                            <div class="sub_head5details files">
+                                Construction Sector
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head5sub">
+                We Also provide
+            </div>
+
+            <div class="iconText">
+                <img src="./pics/icons/airbooking.png" alt="">
+                <div class="head5details">
+                    trusted flight booking service
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
     
 
     <style>
 
+        .section5 {
+            min-height: 120vh;
+            background: linear-gradient(45deg,rgb(79, 79, 255), skyblue);
+            padding-top: 90px;
+            position: relative;
+        }
+        .head5 {
+            font-size: 50px;
+            z-index: 5;
+            width: max-content;
+            position: relative;
+            font-family: var(--poppins);
+            font-weight: 600;
+            color: rgb(217, 217, 217);
+            text-shadow: 0px 1px 4px #0000008f;
+        }
+        .head5sub {
+            font-size: 20px;
+            z-index: 5;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            position: relative;
+            font-family: var(--poppins);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.648);
+            text-shadow: 0px 1px 2px #00000050;
+        }
+        .head5details, .sub_head5details {
+            
+            
+            font-family: var(--poppins);
+            font-weight: 500;
+            line-height: 60px;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            color: rgb(222, 235, 255);
+            text-shadow: 0px 1px 4px #0000008f;
+        }
+        .head5details {
+            font-size: 30px;
+
+
+        }
+        .sub_head5details {
+            font-size: 25px;
+            line-height: 50px;
+            color: rgb(209, 228, 255);
+        }
+        .directory, .files {
+            position: relative;
+            
+        }
+        .directory {
+            padding-left: 30px;
+        }
+
+        .directory .files::after {
+            content: '#';
+            height: 20px;
+            width: 20px;
+
+            border-radius: 15px;
+            position: absolute;
+            font-size: 12px;
+            background: rgb(30, 78, 162);
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(186, 228, 255);
+        }
         
+        .iconText {
+            border-radius: 1000px;
+            display: flex;
+            gap: 20px;
+            padding: 7px;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            background: rgba(255, 255, 255, 0.164);
+            padding-right: 20px;
+        }
+        .iconText img {
+            height: 70px;
+            width: 70px;
+            background: rgba(255, 255, 255, 0.737);
+            border-radius: 100px;
+            padding: 5px;
+        }
 
 
         

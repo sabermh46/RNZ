@@ -9,6 +9,9 @@ var navbar = document.querySelector('.navbar')
 navXpadding < minimum_padding ? navXpadding = minimum_padding : null
 console.log(navXpadding);
 
+var nav = document.querySelector('.nav')
+
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
     makeBg()
@@ -16,12 +19,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
     scrollings()
     
     resizing()
+
     
 
-    if(window.scrollY > 400) {
-        navYpadding = 10
-    }
-    navYscroll()
+
+    
+
+        navYscroll()
 
 
     if(window.scrollY < 300) {
@@ -60,10 +64,8 @@ function scrollings(){
 
         var scrollY = parseInt(window.scrollY)
 
-        if(scrollY < 400){
-            navYpadding = 110 - (scrollY * 0.4)
-            navYscroll()
-        }
+        navYpadding = 110 - (scrollY * 0.4)
+        navYscroll()
 
         
         if(scrollY < 300) {
@@ -89,6 +91,30 @@ function makeBg() {
 
 
 function navYscroll(){
-    var nav = document.querySelector('.nav')
-    nav.style.padding = `${navYpadding < 10 ? 10 : navYpadding}px`
+    var scrollPosition = window.scrollY
+    if(scrollPosition < 400) {
+        nav.style.padding = `${navYpadding < 10 ? 10 : navYpadding}px`
+        console.log( navYpadding,'navYscroll called');
+    } else {
+        nav.style.padding = '10px'
+    }
+    
+
+    
 }
+
+window.addEventListener("beforeunload", function() {
+    // Get the current scroll position
+    var scrollPosition = window.scrollY;
+  
+    // Save the scroll position to local storage
+    localStorage.setItem("scrollPosition", scrollPosition);
+  });
+  
+  // Get the saved scroll position from local storage
+  var savedScrollPosition = localStorage.getItem("scrollPosition");
+  
+  // If there is a saved scroll position, scroll to it
+  if (savedScrollPosition !== null) {
+    window.scrollTo(0, savedScrollPosition);
+  }
