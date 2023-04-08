@@ -1,36 +1,42 @@
-const target = 300;
-const duration = 3000; // 3 seconds in milliseconds
-const stepTime = Math.floor(duration / target);
-let currentNumber = 0;
-
-const counterElement = document.querySelector('.counter.employee');
-
-const counting = setInterval(() => {
-  currentNumber++;
-  counterElement.innerText = currentNumber;
-
-  if (currentNumber === target) {
-    clearInterval(counting);
-  }
-}, stepTime);
 
 
 
+const counters = document.querySelectorAll('.counter');
+
+const countUp = (counter, targetValue, duration) => {
+    let startTime = null;
+    const startValue = parseInt(counter.textContent) || 0;
+
+    const step = (currentTime) => {
+        if (!startTime) startTime = currentTime;
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        const currentValue = Math.round(startValue + progress * (targetValue - startValue));
+        counter.textContent = currentValue;
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const duration = parseInt(counter.getAttribute('data-time'));
+            const targetValue = parseInt(counter.getAttribute('data-count-upto'));
+
+            countUp(counter, targetValue, duration);
+            observer.unobserve(counter);
+        }
+    });
+});
+
+counters.forEach((counter) => observer.observe(counter));
 
 
 
-const target2 = 954;
-const duration2 = 3000; // 3 seconds in milliseconds
-const stepTime2 = Math.floor(duration2 / target2);
-let currentNumber2 = 0;
-
-const counterElement2 = document.querySelector('.counter.employee3');
-
-const counting2 = setInterval(() => {
-  currentNumber2++;
-  counterElement2.innerText = currentNumber2;
-
-  if (currentNumber2 === target2) {
-    clearInterval(counting2);
-  }
-}, stepTime2);
+var plane = document.querySelector('.plane')
+new ActivateInView(plane)

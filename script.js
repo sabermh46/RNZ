@@ -1,10 +1,6 @@
 
-var max_width = 1200
-var minimum_padding = 10
 
 var navbar = document.querySelector('.navbar')
-
-
 var nav = document.querySelector('.nav')
 
 
@@ -87,17 +83,46 @@ function updateNavbarPadding() {
 
 
 window.addEventListener("beforeunload", function() {
-    // Get the current scroll position
+
     var scrollPosition = window.scrollY;
   
-    // Save the scroll position to local storage
     localStorage.setItem("scrollPosition", scrollPosition);
   });
   
-  // Get the saved scroll position from local storage
   var savedScrollPosition = localStorage.getItem("scrollPosition");
   
-  // If there is a saved scroll position, scroll to it
   if (savedScrollPosition !== null) {
     window.scrollTo(0, savedScrollPosition);
   }
+
+
+
+  class ActivateInView {
+    constructor(element) {
+        this.element = element;
+        this.init();
+    }
+
+    init() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    this.onInView(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(this.element);
+    }
+
+    onInView(element) {
+        element.classList.add('active');
+    }
+}
+
+
+
+var bg_sec = document.querySelector('.background_section')
+
+new ActivateInView(bg_sec)
