@@ -12,7 +12,7 @@ html {
     --orange: #F97600;
     --body-bg: #d6d6d6;
     --company-card-text: #4b4b4b;
-    --front-line-color: #8f36ee;
+    --front-line-color: #6f6ec9;
     --section-blue: #6f6ec9;
     --section-blue-head: #cecdff;
     --section-lime: #AAB157;
@@ -204,7 +204,7 @@ body {
     border-radius: 10px;
 }
 .background_section.active::before {
-    height: 600px;
+    height: 1000px;
     width: 2px;
 }
 
@@ -251,6 +251,11 @@ body {
     display: flex;
     width: 100%;
     position: relative;
+    transform: translateY(100px);
+    transition: 1s cubic-bezier(.5,.26,.55,1.32);
+}
+.section2 .subsection .company_card_container.active {
+    transform: translateY(0px);
 }
 
 .subsection .company_card_container::before {
@@ -303,7 +308,6 @@ body {
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
     -webkit-transform: translate3d(0,0,0);
-    -webkit-transform: translateZ(0);
 }
 
 .subsection.right .company_card_container {

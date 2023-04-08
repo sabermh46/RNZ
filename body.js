@@ -40,3 +40,9 @@ counters.forEach((counter) => observer.observe(counter));
 
 var plane = document.querySelector('.plane')
 new ActivateInView(plane)
+
+var company_cards = document.querySelectorAll('.company_card_container')
+
+company_cards.forEach(card =>{
+  new ActivateInView(card)
+})
