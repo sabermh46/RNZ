@@ -46,3 +46,6 @@ var company_cards = document.querySelectorAll('.company_card_container')
 company_cards.forEach(card =>{
   new ActivateInView(card)
 })
+
+var sec6head = document.querySelector('.sec6head');
+new ActivateInView(sec6head)
