@@ -49,3 +49,12 @@ company_cards.forEach(card =>{
 
 var sec6head = document.querySelector('.sec6head');
 new ActivateInView(sec6head)
+
+var armsContainer = document.querySelector('.arms_container');
+new ActivateInView(armsContainer)
+
+var arms = document.querySelectorAll('.arm')
+
+arms.forEach(arm=>{
+  new ActivateInView(arm)
+})

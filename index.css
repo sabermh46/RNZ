@@ -876,3 +876,154 @@ div.hudai {
     border-radius: 100px;
     padding: 5px;
 }
+
+
+.section6 {
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--orange);
+}
+.container.sec6 {
+    overflow: hidden;
+    min-height: 100vh;
+}
+.sec6head {
+    background: linear-gradient(#6177f9, rgba(135, 207, 235, 0));
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    transform: translateY(-100px);
+    transition: 0.7s ease;
+    color: #ffffff;
+}
+.sec6head.active {
+    transform: translateY(0px);
+}
+
+
+.arms_container {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+.arms_container::after, .arms_container::before {
+    content: '';
+    background: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
+.arms_container::after {
+    height: 0px;
+    width: 0px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.arms_container::before {
+    height: 0px;
+    width: 2px;
+    transition: 2s;
+    transition-delay: 0.5s;
+}
+.arms_container.active::after {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+.arms_container.active::before {
+    height: 100%;
+    width: 2px;
+}
+
+.arms_container .leftArm, .arms_container .rightArm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.arms_container .rightArm {
+    align-items: end;
+    padding-top: 65px;
+}
+.arm {
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff00;
+    width: calc(100% - 35px);
+    min-height: 80px;
+    min-width: 200px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    font-family: var(--poppins);
+    position: relative;
+    border-radius: 12px;
+    transition: 0.5s ease;
+    transition-delay: 2s;
+}
+.arm.active {
+    background: rgba(0, 0, 0, 0.252);
+    color: #ffffff;
+}
+.arm::before, .arm::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.452);
+    position: absolute;
+    transform: translateX(-50%);
+    top: calc(100% - 100px);
+
+    
+}
+.arm::before {
+    background: rgba(0, 0, 0, 1);
+    height: 30px;
+    width: 8px;
+    border-radius: 15px;
+    top: 150%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.arm::after {
+    height: 3px;
+    width: 38px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0);
+    transition: 0.5s;
+    transition-delay: 1.5s;
+}
+
+.arm.active::before {
+    top: 50%;
+}
+.arm.active::after {
+    transform: translateY(-50%) scaleX(1);
+}
+
+
+.rightArm .arm::before {
+    left: -39px;
+    right: none;
+}
+.rightArm .arm::after {
+    left: -38px;
+    right: none;
+    transform-origin: 0% 50%;
+}
+.leftArm .arm::before {
+    left: none;
+    right: -39px;
+}
+.leftArm .arm::after {
+    left: none;
+    right: -38px;
+    transform-origin: 100% 50%;
+}
