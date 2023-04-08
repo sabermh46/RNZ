@@ -1,13 +1,9 @@
 
-var max_width = 1350
+var max_width = 1200
 var minimum_padding = 10
 
-var navYpadding = 110, navXpadding = (window.innerWidth - max_width)/2
-var initialnavXpadding = navXpadding
 var navbar = document.querySelector('.navbar')
 
-navXpadding < minimum_padding ? navXpadding = minimum_padding : null
-console.log(navXpadding);
 
 var nav = document.querySelector('.nav')
 
@@ -15,17 +11,8 @@ var nav = document.querySelector('.nav')
 document.addEventListener("DOMContentLoaded", ()=>{
 
     makeBg()
+    updateNavbarPadding()
 
-    scrollings()
-    
-    resizing()
-
-    
-
-
-    
-
-        navYscroll()
 
 
     if(window.scrollY < 300) {
@@ -44,29 +31,23 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 
-function resizing(){
-    window.addEventListener('resize', ()=>{
+window.addEventListener('resize', ()=>{
 
-        makeBg()
+    makeBg()
+    updateNavbarPadding()
 
 
-    })
-}
-
+})
 
 
 
 
 
-function scrollings(){
+
     window.addEventListener('scroll', ()=>{
 
 
         var scrollY = parseInt(window.scrollY)
-
-        navYpadding = 110 - (scrollY * 0.4)
-        navYscroll()
-
         
         if(scrollY < 300) {
             navbar.classList.remove('shadow')
@@ -79,8 +60,9 @@ function scrollings(){
         }
 
 
+        updateNavbarPadding()
+
     })
-}
 
 
 
@@ -90,18 +72,19 @@ function makeBg() {
 }
 
 
-function navYscroll(){
-    var scrollPosition = window.scrollY
-    if(scrollPosition < 400) {
-        nav.style.padding = `${navYpadding < 10 ? 10 : navYpadding}px`
-        console.log( navYpadding,'navYscroll called');
-    } else {
-        nav.style.padding = '10px'
-    }
-    
+function updateNavbarPadding() {
+    const displayWidth = window.innerWidth;
+    const scrollPosition = window.scrollY;
+  
+    if (displayWidth > 1020) {
+        const sidePadding = scrollPosition >= 400 ? 10 : Math.max(10, ((400 - scrollPosition) * 0.25));
+        const topPadding = scrollPosition >= 400 ? 10 : 10 + (400 - scrollPosition) * 0.25;
+        nav.style.padding = `${topPadding}px ${sidePadding}px 10px ${sidePadding}px`;
+      } else {
+        nav.style.padding = '10px';
+      }
+  }
 
-    
-}
 
 window.addEventListener("beforeunload", function() {
     // Get the current scroll position
