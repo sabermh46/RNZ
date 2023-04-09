@@ -126,3 +126,39 @@ window.addEventListener("beforeunload", function() {
 var bg_sec = document.querySelector('.background_section')
 
 new ActivateInView(bg_sec)
+
+
+
+
+
+
+const loader = document.getElementById('loader');
+const progressBar = document.getElementById('progress-bar');
+const percentage = document.getElementById('percentage');
+const images = document.querySelectorAll('img');
+let imagesLoaded = 0;
+
+function updateProgressBar() {
+  const progress = (imagesLoaded / images.length) * 100;
+  progressBar.style.width = `${progress}%`;
+  percentage.textContent = `${Math.round(progress)}%`;
+
+  if (imagesLoaded === images.length) {
+    loader.style.display = 'none';
+  }
+}
+
+images.forEach((img) => {
+  const tempImage = new Image();
+  tempImage.src = img.src;
+
+  tempImage.addEventListener('load', () => {
+    imagesLoaded++;
+    updateProgressBar();
+  });
+
+  tempImage.addEventListener('error', () => {
+    imagesLoaded++;
+    updateProgressBar();
+  });
+});
