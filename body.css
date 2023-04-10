@@ -1,5 +1,9 @@
 
 
+.h500onCC {
+    height: 50px;
+}
+
 
 .section5 {
     min-height: 110vh;
@@ -282,7 +286,7 @@
 .section3 .main3 .left {
     position: -webkit-sticky;
     position: sticky;
-    top: 90px;
+    top: 120px;
     align-self: flex-start;
     flex: 4;
 }
@@ -300,7 +304,7 @@
     right: -100%;
 }
 
-.section3 .main3 .left .floating1 {
+.section3 .floating1 {
     height: 50px;
     width: max-content;
     padding: 5px 25px;
@@ -312,6 +316,9 @@
     font-size: 30px;
     border-radius: 200px;
     line-height: 45px;
+    position: sticky;
+    top: 90px;
+    z-index: 99;
     /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.144); */
 }
 .section3 .main3 .right {
@@ -512,4 +519,229 @@ div.hudai {
     font-weight: bold;
     color: var(--company-card-text);
     text-shadow: 0px 1px 3px #0000005a;
+}
+
+.icon_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.icon_items .icon_item {
+    background: #c5c5c58d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--poppins);
+    font-weight: 700;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 16px;
+    transition: 0.5s;
+}
+.icon_items .icon_item:hover {
+    background: #a5a5a5b9;
+}
+.icon_items .icon_item div {
+    height: 30px;
+    width: 30px;
+}
+.icon_items .icon_item div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0.9);
+}
+
+
+
+ /* only section 2 */
+@media (max-width: 950px) {
+
+    .h500onCC {
+        height: 20px;
+    }
+
+    .section2 {
+        flex-direction: column;
+        min-width: 300px;
+    }
+    .section2 .subsection {
+        width: 100%;
+    }
+    
+    .section2 .subsection .company_card_container {
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        position: relative;
+        transform: translateY(100px);
+        transition: 1s cubic-bezier(.5,.26,.55,1.32);
+    }
+    .section2 .subsection .company_card_container.active {
+        transform: translateY(0px);
+    }
+    
+    .subsection .company_card_container::before {
+        left: 35px;
+    }
+    .subsection .company_card_container::after {
+        left: -1px;
+    }
+    
+    .subsection .company_card_container .company_card {
+    
+        width: calc(100% - 50px);
+        background: rgb(255, 255, 255, 0.4);
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+        border: 1px solid rgba(255, 255, 255, 0.743);
+        padding: 10px;
+    
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    
+        backface-visibility: hidden;
+        perspective: 1000;
+        transform: translate3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-transform: translate3d(0,0,0);
+    }
+    
+    
+    
+    
+    .subsection .company_card_container .company_card .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .subsection .company_card_container .company_card .content > img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .icon_items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .icon_items .icon_item {
+        background: #c5c5c58d;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--poppins);
+        font-weight: 500;
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 14px;
+        transition: 0.5s;
+    }
+    .icon_items .icon_item div {
+        height: 25px;
+        width: 25px;
+    }
+    
+
+}
+
+@media (max-width: 700px) {
+    /* SECTION 3  */
+
+
+        
+    .section3 .main3 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .section3 .main3 .left {
+        top: 0;
+        width: 100%;
+        position: relative;
+        flex: 1;
+    }
+    .section3 .main3 .left img.floating {
+        max-width: 200px;
+    }
+    .section3 .main3 .left img.floating:nth-child(2) {
+        right: 0;
+    }
+
+    .section3 .floating1 {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    .section3 .main3 .right {
+        z-index: 10;
+        padding: 0px;
+        flex: 1;
+    }
+
+    .subheading {
+        text-align: center;
+        font-size: 16px;
+    }
+
+
+    ul.food_items {
+        list-style-type: none;
+        padding-top: 10px;
+    }
+    ul.food_items li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subheading, ul.food_items li {
+        text-shadow: 0px 2px 4px rgba(40, 40, 40, 0.53);
+    }
+
+
+    div.hudai {
+        gap: 10px;
+        row-gap: 20px;
+        justify-content: space-around;
+    }
+    .food_img_card {
+        width: 47%;
+        min-height: 100px;
+        padding: 5px;
+        border-radius: 8px;
+    }
+    .food_img_card .img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        border-radius: 6px;
+    }
+    .food_img_card .img img {
+        width: 100%;
+        
+    }
+    .food_img_card .title {
+        height: 0;
+        min-height: 40px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-weight: 500;
+        line-height: 20px;
+        font-size: 14px;
+        font-family: var(--poppins);
+        color: var(--section-blue);
+    }
+}
+
+@media (max-width: 950px) and (min-width: 501px) {
+    
 }

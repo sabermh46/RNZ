@@ -64,7 +64,7 @@ window.addEventListener('resize', ()=>{
 
 function makeBg() {
     var bg_section = document.querySelector('.background_section');
-    bg_section.style.height = `${window.innerWidth / 2.4}px`
+    bg_section.style.height = `${Math.max(350, window.innerWidth / 2.4)}px`
 }
 
 
@@ -94,6 +94,15 @@ window.addEventListener("beforeunload", function() {
   if (savedScrollPosition !== null) {
     window.scrollTo(0, savedScrollPosition);
   }
+
+
+  var links = document.querySelector('.navbar .links')
+
+  var burger_menu = document.querySelector('.menu')
+  burger_menu.addEventListener('click', ()=>{
+    burger_menu.classList.toggle('active')
+    links.classList.toggle('active')
+  })
 
 
 
