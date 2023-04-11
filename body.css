@@ -44,8 +44,6 @@
 }
 .head5details {
     font-size: 30px;
-
-
 }
 .sub_head5details {
     font-size: 25px;
@@ -112,6 +110,12 @@
     height: 300px;
     z-index: 1;
     opacity: 0.8;
+}
+@media (max-width: 600px) {
+    .the_air_frame {
+        right: 0;
+        height: 200px;
+    }
 }
 .the_air_frame .cl1,
 .the_air_frame .cl2,
@@ -399,7 +403,7 @@ div.hudai {
 
 
 
-/* SECTION 3 */
+/* SECTION 2 */
 
 
 .section2 {
@@ -564,7 +568,7 @@ div.hudai {
 
     .section2 {
         flex-direction: column;
-        min-width: 300px;
+        min-width: 200px;
     }
     .section2 .subsection {
         width: 100%;
@@ -600,13 +604,6 @@ div.hudai {
         display: flex;
         gap: 15px;
         align-items: center;
-    
-        backface-visibility: hidden;
-        perspective: 1000;
-        transform: translate3d(0,0,0);
-        -webkit-backface-visibility: hidden;
-        -webkit-perspective: 1000;
-        -webkit-transform: translate3d(0,0,0);
     }
     
     
@@ -648,6 +645,27 @@ div.hudai {
     }
     
 
+}
+
+@media (max-width: 950px) and (min-width: 1px) {
+    .subsection .company_card_container .company_card {
+    
+        width: calc(100% - 50px);
+        background: rgb(255, 255, 255, 0.4);
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+        border: 1px solid rgba(255, 255, 255, 0.743);
+        padding: 10px;
+    
+        display: flex;
+        flex-direction: column;
+    }
+    .subsection .company_card_container .company_card .content > img {
+        height: 110px;
+        width: 110px;
+    }
+    .h100 {
+        height: 50px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -740,6 +758,132 @@ div.hudai {
         font-family: var(--poppins);
         color: var(--section-blue);
     }
+
+    /* DEVELOPMENT SECTION */
+
+    .section4 .main4 {
+        background-position: 50% 50%;
+        background-size: 250px;
+    }
+
+    .floating2 {
+        margin: 0 auto;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .section4 .main4 .subheading {
+        font-family: var(--poppins);
+        color: var(--section-lime-light);
+        margin-top: 30px;
+        letter-spacing: 3px;
+    }
+
+
+
+
+    .development_section {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    .development_section .left {
+        position: relative;
+        top: 0;
+        flex: 1;
+    }
+    .development_section .left .project_title {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .development_section .left .project_sub_title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+
+    .development_section .right {
+        flex: 1;
+    }
+    .development_section .right .pics {
+        width: 100%;
+        padding: 8px;
+    }
+    .development_section .right .pics img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.446);
+    }
+
+
+
+
+    .section5 {
+        min-height: 110vh;
+        background: linear-gradient(45deg,rgb(79, 79, 255), skyblue);
+        padding-top: 90px;
+        position: relative;
+    }
+    .head5 {
+        font-size: 30px;
+        color: rgb(217, 217, 217);
+    }
+    .head5sub {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.759);
+    }
+    .head5details, .sub_head5details {
+        font-family: var(--poppins);
+        font-weight: 500;
+        line-height: 60px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        color: rgb(222, 235, 255);
+        text-shadow: 0px 1px 4px #0000008f;
+    }
+    .head5details {
+        font-size: 18px;
+        line-height: 200%;
+    }
+    .sub_head5details {
+        font-size: 16px;
+        
+        line-height: 180%;
+        color: rgb(209, 228, 255);
+    }
+    .directory, .files {
+        position: relative;
+        
+    }
+    .directory {
+        padding-left: 30px;
+    }
+    
+    .directory .files::after {
+        height: 15px;
+        width: 15px;
+        font-size: 8px;
+    }
+    
+    .iconText {
+        gap: 10px;
+        padding-right: 10px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .iconText img {
+        height: 45px;
+        width: 45px;
+        padding: 2px;
+    }
+    .iconText .head5details {
+        line-height: 120%;
+    }
+    
 }
 
 @media (max-width: 950px) and (min-width: 501px) {
