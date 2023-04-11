@@ -115,6 +115,7 @@
     .the_air_frame {
         right: 0;
         height: 200px;
+        overflow: hidden;
     }
 }
 .the_air_frame .cl1,
