@@ -113,7 +113,8 @@
 }
 @media (max-width: 600px) {
     .the_air_frame {
-        right: 0;
+        right: auto;
+        left: 0;
         height: 200px;
         overflow: hidden;
     }
