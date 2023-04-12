@@ -101,3 +101,84 @@
     font-weight: 500;
     letter-spacing: 1px;
 }
+
+.md_card_container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.md_card {
+    background: linear-gradient(45deg,#f3eae2 40%, #ffd0a6);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* width: calc(50% - 10px); */
+    min-width: 400px;
+    flex: 1;
+}
+.md_card .post {
+    position: absolute;
+    background: rgba(249, 118, 0, 0.6);
+    border: 1px solid rgba(249, 118, 0, 1);
+    border-top:  1px solid transparent;
+    border-radius: 0 0 12px 12px;
+    right: 10px;
+    top: 0px;
+    color: white;
+    font-family: var(--poppins);
+    text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgba(94, 94, 94, 0.37);
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.md_card .left .image {
+    height: 150px;
+    width: 150px;
+    border-radius: 1000px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.334);
+}
+.md_card .left .image img {
+    height: 100%;
+    width: 100%;
+}
+.md_card .right {
+    padding-top: 30px;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.md_title {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--orange);
+    text-shadow: 0px 2px 2px rgba(94, 94, 94, 0.164);
+}
+a.md_email {
+    height: 30px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-family: var(--poppins);
+    font-size: 14px;
+    letter-spacing: 1px;
+    gap: 5px;
+    line-height: 22px;
+    transition: 0.5s;
+    border-radius: 4px;
+    padding: 5px;
+}
+a.md_email:hover {
+    background:rgba(255, 255, 255, 0.334);
+}
+a.md_email img {
+    height: 100%;
+}

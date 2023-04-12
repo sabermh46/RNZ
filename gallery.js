@@ -1,5 +1,15 @@
 
 
+class CustomActivateInView extends ActivateInView {
+    onInView(element) {
+        // Implement your custom behavior here.
+        gotoIndex(0)
+    }
+}
+
+var gallery = document.querySelector('.gallery')
+new CustomActivateInView(gallery)
+
 
 
 
@@ -111,4 +121,4 @@ class GalleryWidth {
     clearInterval(timer)
   }
 
-  gotoIndex(0)
+  
