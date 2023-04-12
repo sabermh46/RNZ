@@ -10,6 +10,7 @@
     background: linear-gradient(45deg,rgb(79, 79, 255), skyblue);
     padding-top: 90px;
     position: relative;
+    padding-bottom: 50px;
 }
 .head5 {
     font-size: 50px;

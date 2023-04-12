@@ -4,6 +4,7 @@ var navbar = document.querySelector('.navbar')
 var nav = document.querySelector('.nav')
 
 
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
     makeBg()
@@ -31,6 +32,7 @@ window.addEventListener('resize', ()=>{
 
     makeBg()
     updateNavbarPadding()
+    resizeGalleryFrame()
 
 
 })
@@ -171,3 +173,5 @@ images.forEach((img) => {
     updateProgressBar();
   });
 });
+
+
