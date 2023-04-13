@@ -871,3 +871,22 @@ a.ct_icon:hover p.text {
         color: black;
     }
 }
+
+.fromRightToLeft {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 1s ease;
+}
+.fromRightToLeft.active {
+    transform: translateX(0px);
+    opacity: 1;
+}
+.fromDownToTop {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s ease;
+}
+.fromDownToTop.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
