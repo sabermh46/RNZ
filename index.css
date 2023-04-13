@@ -184,11 +184,13 @@ body {
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 9;
 }
+
 .addition::before {
     content: '1257499V';
     position: absolute;
-    bottom: -5px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
@@ -199,8 +201,8 @@ body {
     background: rgba(0, 0, 0, 0.375);
     padding: 2px 5px;
     border-radius: 5px;
-    
 }
+
 .background_section .full_logo img {
     width: 100%;
 }
@@ -242,7 +244,7 @@ body {
 
 .container {
     max-width: var(--max-width);
-    min-width: 300px;
+    min-width: 250px;
     width: calc(100% - 40px);
     margin: 0 auto;
     position: relative;

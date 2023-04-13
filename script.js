@@ -32,7 +32,6 @@ window.addEventListener('resize', ()=>{
 
     makeBg()
     updateNavbarPadding()
-    resizeGalleryFrame()
 
 
 })

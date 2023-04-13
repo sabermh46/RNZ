@@ -3,13 +3,17 @@
 .background_section::after, .background_section::before {
     content: none !important;
 }
+.addition::before {
+    bottom: -20px;
+}
 
 
 .bg_bg {
     display: flex;
     justify-content: space-between;
-    width: var(--max-width);
-    min-width: 300px;
+    max-width: var(--max-width);
+    width: calc(100% - 40px);
+    margin: 0 auto;
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -21,10 +25,10 @@
     flex: 1;
 }
 .bg_bg .image_in_left img {
-    width: 80%;
+    height: 150px;
 }
 .bg_bg .head_in_right {
-    font-size: 100px;
+    font-size: 7vw;
     font-family: var(--poppins);
     color: rgba(255, 255, 255, 0.591);
     text-transform: uppercase;
@@ -181,4 +185,139 @@ a.md_email:hover {
 }
 a.md_email img {
     height: 100%;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .bg_bg .image_in_left img {
+        height: 100px;
+    }
+    .bg_bg .head_in_right {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .owers_card {
+        padding: 20px;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    .owers_card .post {
+        border-radius: 0 0 14px 14px;
+        right: 20px;
+        font-size: 16px;
+    }
+    .owers_card .image {
+        height: 200px;
+    }
+    .details .title {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .details .mid {
+        font-size: 12px;
+    }
+    .details .message {
+        color: #2d2d2d;
+        font-size: 14px;
+    }
+    .md_card_container {
+        
+    }
+    .md_card {
+        min-width: 300px;
+    }
+    .md_card .post {
+        border-radius: 0 0 8px 8px;
+        padding: 8px 14px;
+        right: 10px;
+        /* right: 50%;
+        transform: translateX(50%); */
+    }
+    .md_card .left .image {
+        height: 130px;
+        width: 130px;
+    }
+    .md_card .right {
+        padding-top: 30px;
+    }
+    .md_title {
+        font-size: 24px;
+    }
+    a.md_email:hover {
+        background:rgba(255, 255, 255, 0.334);
+    }
+    a.md_email img {
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .bg_bg {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .owers_card {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .owers_card .post {
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+        line-height: 16px;
+        letter-spacing: 1px;
+        border-radius: 0 0 8px 8px;
+        padding: 8px 10px;
+    }
+    .details .message {
+        font-size: 14px;
+    }
+
+
+
+    .md_card {
+        min-width: 250px;
+        padding-top: 50px;
+        flex-direction: column;
+    }
+    .md_card .post {
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+        line-height: 16px;
+        letter-spacing: 1px;
+        border-radius: 0 0 6px 6px;
+        padding: 8px 10px;
+    }
+    .md_card .left .image {
+        height: 130px;
+        width: 130px;
+    }
+    .md_card .right {
+        padding-top: 0px;
+    }
+    .md_title {
+        font-size: 24px;
+    }
+    a.md_email:hover {
+        background:rgba(255, 255, 255, 0.334);
+    }
+    a.md_email img {
+        height: 100%;
+    }
 }
