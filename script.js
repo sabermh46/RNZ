@@ -83,18 +83,16 @@ function updateNavbarPadding() {
   }
 
 
-window.addEventListener("beforeunload", function() {
-
-    var scrollPosition = window.scrollY;
+// window.addEventListener("beforeunload", function() {
+//     var scrollPosition = window.scrollY;
+//     localStorage.setItem("scrollPosition", scrollPosition);
+//   });
   
-    localStorage.setItem("scrollPosition", scrollPosition);
-  });
+  // var savedScrollPosition = localStorage.getItem("scrollPosition");
   
-  var savedScrollPosition = localStorage.getItem("scrollPosition");
-  
-  if (savedScrollPosition !== null) {
-    window.scrollTo(0, savedScrollPosition);
-  }
+  // if (savedScrollPosition !== null) {
+  //   window.scrollTo(0, savedScrollPosition);
+  // }
 
 
   var links = document.querySelector('.navbar .links')
