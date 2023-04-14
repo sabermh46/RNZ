@@ -37,12 +37,12 @@ html {
 body {
     min-height: 200vh;
     background: var(--body-bg);
-    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
 .nav {
-    width: 100%;
+    max-width: 100%;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -721,23 +721,23 @@ a.ct_icon:hover p.text {
 
     .navbar .links {
         min-width: 280px;
-        height: calc(100vh - 85px);
+        height: 90vh;
         background-color: #51411c;
         background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #51411c 17px ), repeating-linear-gradient( #ff903555, #ff9035 );
         border-radius: 7px;
         border: 1px solid #999999;
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        top: 85px;
+        top: 80px;
         right: -290px;
         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
     }
 
     .navbar .links.active {
-        top: 85px;
+        top: 80px;
         right: 10px;
     }
 
