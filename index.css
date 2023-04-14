@@ -17,6 +17,8 @@ html {
     --section-blue-head: #cecdff;
     --section-lime: #AAB157;
     --section-lime-light: #EBF5AE;
+    --purple: rgb(113, 50, 209);
+    --purple-light: rgb(194, 154, 255);
 }
 
 * {
