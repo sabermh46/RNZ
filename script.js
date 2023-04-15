@@ -76,11 +76,7 @@ function updateNavbarPadding() {
     if (displayWidth > 1020) {
         const sidePadding = scrollPosition >= 400 ? 10 : Math.max(10, ((400 - scrollPosition) * 0.25));
         const topPadding = scrollPosition >= 400 ? 10 : 10 + (400 - scrollPosition) * 0.25;
-        padding = `${topPadding}px ${sidePadding}px 10px ${sidePadding}px`;
-      } else if (displayWidth < 500){
-        var bg_section = document.querySelector('.background_section').getBoundingClientRect().width;
-        nav.style.width = bg_section + 'px'
-        nav.style.padding = '10px';
+        nav.style.padding = `${topPadding}px ${sidePadding}px 10px ${sidePadding}px`;
       }
       else {
         nav.style.padding = '10px';

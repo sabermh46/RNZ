@@ -563,6 +563,10 @@ a.rnzBtnCom:hover {
     right: -38px;
     transform-origin: 100% 50%;
 }
+.over_flow_hidden {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 
 @media (max-width: 700px) {
