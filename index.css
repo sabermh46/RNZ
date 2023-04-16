@@ -565,7 +565,7 @@ a.rnzBtnCom:hover {
 }
 .over_flow_hidden {
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
