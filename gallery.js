@@ -12,34 +12,32 @@ new CustomActivateInView(gallery)
 
 
 
-
-class GalleryWidth {
+  class GalleryWidth {
     constructor() {
-      this.gallery = document.querySelector('.gallery');
+      this.gallery = document.querySelector('.gallery')
       this.width = this.gallery.getBoundingClientRect().width;
-      window.addEventListener('resize', () => {
-        this.width = this.gallery.getBoundingClientRect().width;
-      });
+      window.addEventListener('resize', this.updateWidth.bind(this));
     }
   
-    getGalleryWidth() {
-      return this.width;
+    updateWidth() {
+      this.width = this.gallery.getBoundingClientRect().width
     }
   }
   
   var frame = document.querySelector('.gallery .frame')
   var imgs = document.querySelectorAll('.gallery .frame .slider img')
   
-  var frameWidth = new GalleryWidth().getGalleryWidth()
+  var frameWidth = new GalleryWidth()
+
+  window.addEventListener('resize', resizeGalleryFrame)
   
   function resizeGalleryFrame(){
-    frameWidth = new GalleryWidth().getGalleryWidth()
-    frame.style.width = `${frameWidth}px`
-    frame.style.height = `${frameWidth / (8/5)}px`
+    frame.style.width = `${frameWidth.width}px`
+    frame.style.height = `${frameWidth.width / (8/5)}px`
     imgs.forEach(img =>{
     
-      img.style.width = `${frameWidth}px`
-      img.style.height = `${frameWidth / (8/5)}px`
+      img.style.width = `${frameWidth.width}px`
+      img.style.height = `${frameWidth.width / (8/5)}px`
     
     })
   }
@@ -85,6 +83,7 @@ class GalleryWidth {
   
   
   function gotoIndex(index){
+    
     if(index > max_index){
       current_galley_index = 0
       gotoIndex(current_galley_index)
@@ -95,10 +94,9 @@ class GalleryWidth {
       items.forEach(item=>{
         item.classList.remove('this')
       })
-      console.log('index === ', index);
     
       items[index].classList.add('this')
-      slider.style.left = `-${frameWidth * index}px`
+      slider.style.left = `-${frameWidth.width * index}px`
   
       current_galley_index = index
   
