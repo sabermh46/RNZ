@@ -85,11 +85,9 @@ new CustomActivateInView(gallery)
   function gotoIndex(index){
     
     if(index > max_index){
-      current_galley_index = 0
-      gotoIndex(current_galley_index)
+      gotoIndex(0)
     } else if(index < 0){
-      current_galley_index = max_index
-      gotoIndex(current_galley_index)
+      gotoIndex(max_index)
     } else {
       items.forEach(item=>{
         item.classList.remove('this')
@@ -108,7 +106,7 @@ new CustomActivateInView(gallery)
   
 
   
-  var timer
+  var timer;
   
   function startTimer(){
     timer = setInterval(()=>{
