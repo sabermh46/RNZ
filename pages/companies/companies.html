@@ -111,11 +111,230 @@
         </div>
     </div>
 
+    <div style="height: 50px;"></div>
+
+    <div class="over_flow_hidden">
+        <div class="container">
+            <div class="company c1">
+                <div class="company_title">
+                    RNZ GOLDEN VENTURE SDN BHD
+                </div>
+                <div class="details">
+                    <div class="com_card cc11">
+                        <div class="com_title">
+                            FOOD MANUFACTURING
+                        </div>
+                        <div class="com_det">
+                            Join us in revolutionizing the way we eat with our innovative food manufacturing solutions.
+                        </div>
+                    </div>
+                    <div class="com_card cc12">
+                        <div class="com_title">
+                            Farming
+                        </div>
+                        <div class="com_det">
+                            Discover a new level of sustainability in farming with our eco-friendly practices
+                        </div>
+                    </div>
+                    <div class="com_card cc13">
+                        <div class="com_title">
+                            MAN POWER SUPPLY
+                        </div>
+                        <div class="com_det">
+                            MAN POWER SUPPLY FOR OUR MANUFACTURING AND FARMING
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="height: 50px;"></div>
+
+            <div class="company c2">
+                <div class="company_title">
+                    RNZ GOLDEN SERVICES SDN BHD
+                </div>
+                <div class="details">
+                    <div class="com_card cc21">
+                        <div class="com_title">
+                            RESTAURANT
+                        </div>
+                        <div class="com_det">
+                            Join us in revolutionizing the way we eat with our innovative food manufacturing solutions.
+                        </div>
+                    </div>
+                    <div class="com_card cc22">
+                        <div class="com_title">
+                            CLEANING
+                        </div>
+                        <div class="com_det">
+                            Discover a new level of sustainability in farming with our eco-friendly practices
+                        </div>
+                    </div>
+                    <div class="com_card cc23">
+                        <div class="com_title">
+                            FLIGHT TICKET BOOKING
+                        </div>
+                        <div class="com_det">
+                            TRUSTED FLIGHT BOOKING SERVICE FOR ALL OF OUR CUSTOMERS
+                        </div>
+                    </div>
+                    <div class="com_card cc13">
+                        <div class="com_title">
+                            MAN POWER SUPPLY
+                        </div>
+                        <div class="com_det">
+                            PROFESSIONAL MAN POWER SUPPLY FOR OUR SERVICE SECTOR
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div style="height: 50px;"></div>
+
+            <div class="company c3">
+                <div class="company_title">
+                    RNZ GOLDEN DEVELOPMENT SDN BHD
+                </div>
+
+                
+            </div>
+
+            <div style="height: 50px;"></div>
+
+            <div class="company c4">
+                <div class="company_title">
+                    RNZ GOLDEN GARMENT SDN BHD
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
 
 
     <style>
+        .cc11 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+            url(./../../pics/gallery/g1.png);
+            background-position: 50% 70%;
+        }
+        .cc12 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+            url(./../../pics/farming.jpg);
+            background-position: 50% 50%;
+        }
+        .cc13 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+            url(./../../pics/mps.jpg);
+            background-position: 50% 40%;
+        }
 
+        .cc21 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+            url(./../../pics/restaurent.png);
+            background-position: 50% 30%;
+        }
+        .cc22 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+            url(./../../pics/cleaning.webp);
+            background-position: 50% 50%;
+        }
+        .cc23 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+            url(./../../pics/ftb.jpg);
+            background-position: 100% 50%;
+        }
+
+        .company {
+            min-height: 600px;
+            border: 3px solid;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+       
+        .company_title {
+            font-family: var(--poppins);
+            font-size: 35px;
+            font-weight: 700;
+            width: max-content;
+            padding: 15px 25px;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0% 100%);
+            padding-right: 50px;
+            max-width: 90%;
+        }
+
+        .company .details {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .com_card {
+            height: 220px;
+            min-width: 260px;
+            max-width: 500px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 10px;
+            border-radius: 6px;
+            gap: 10px;
+        }
+        .com_title {
+            font-family: var(--poppins);
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+        }
+        .com_det {
+            font-family: var(--poppins);
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+        }
         
+
+
+
+
+        .company.c1 {
+            border-color: var(--orange);
+        }
+        .company.c1 .company_title {
+            color: #ffdec1;
+            background: var(--orange);
+        }
+
+        .company.c2 {
+            border-color: var(--purple);
+        }
+        .company.c2 .company_title {
+            color: var(--purple-light);
+            background: var(--purple);
+        }
+        .company.c3 {
+            border-color: var(--section-lime);
+        }
+        .company.c3 .company_title {
+            color: var(--section-lime-light);
+            background: var(--section-lime);
+        }
+        .company.c4 {
+            border-color: var(--section-blue);
+        }
+        .company.c4 .company_title {
+            color: var(--section-blue-head);
+            background: var(--section-blue);
+        }
+
+
         
         
     </style>
@@ -125,7 +344,7 @@
 
 
 
-
+    <div style="height: 50px;"></div>
    
 
     <div class="footer">
