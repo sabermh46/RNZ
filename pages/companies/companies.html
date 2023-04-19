@@ -198,6 +198,41 @@
                     RNZ GOLDEN DEVELOPMENT SDN BHD
                 </div>
 
+                <div class="details">
+                    <div class="com_card cc31">
+                        <div class="com_title">
+                            CONSTRUCTION
+                        </div>
+                        <div class="com_det">
+                            Experience the future of construction with our cutting-edge technologies and techniques
+                        </div>
+                    </div>
+                    <div class="com_card cc32">
+                        <div class="com_title">
+                            General Trading
+                        </div>
+                        <div class="com_det">
+                            Find the products you need to succeed with our diverse range of general trading offerings
+                        </div>
+                    </div>
+                    <div class="com_card cc33">
+                        <div class="com_title">
+                            General Merchant
+                        </div>
+                        <div class="com_det">
+                            Find everything you need in one place with our convenient and affordable general merchant offerings
+                        </div>
+                    </div>
+                    <div class="com_card cc13">
+                        <div class="com_title">
+                            MAN POWER SUPPLY
+                        </div>
+                        <div class="com_det">
+                            PROFESSIONAL MAN POWER SUPPLY FOR OUR DEVELOPMENT SECTOR
+                        </div>
+                    </div>
+                </div>
+
                 
             </div>
 
@@ -206,6 +241,33 @@
             <div class="company c4">
                 <div class="company_title">
                     RNZ GOLDEN GARMENT SDN BHD
+                </div>
+
+                <div class="details">
+                    <div class="com_card cc41">
+                        <div class="com_title">
+                            GARMENT
+                        </div>
+                        <div class="com_det">
+                            Step out in style with our trendy and fashionable garments that are designed to turn heads
+                        </div>
+                    </div>
+                    <div class="com_card cc42">
+                        <div class="com_title">
+                            Import & Export
+                        </div>
+                        <div class="com_det">
+                            Explore global markets with our import and export services that connect you with the world
+                        </div>
+                    </div>
+                    <div class="com_card cc13">
+                        <div class="com_title">
+                            MAN POWER SUPPLY
+                        </div>
+                        <div class="com_det">
+                            PROFESSIONAL MAN POWER SUPPLY FOR OUR GARMENT SECTOR
+                        </div>
+                    </div>
                 </div>
 
                 
@@ -234,7 +296,7 @@
 
         .cc21 {
             background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
-            url(./../../pics/restaurent.png);
+            url(./../../pics/res.jpg);
             background-position: 50% 30%;
         }
         .cc22 {
@@ -248,8 +310,35 @@
             background-position: 100% 50%;
         }
 
+        .cc31 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+            url(./../../pics/gallery/g2.png);
+            background-position: 50% 30%;
+        }
+        .cc32 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+            url(./../../pics/generalTrading.jpg);
+            background-position: 50% 50%;
+        }
+        .cc33 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+            url(./../../pics/generalMarchant.jpg);
+            background-position: 100% 50%;
+        }
+
+        .cc41 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+            url(./../../pics/garment.webp);
+            background-position: 50% 50%;
+        }
+        .cc42 {
+            background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+            url(./../../pics/IandEx.jpg);
+            background-position: 100% 50%;
+        }
+
+
         .company {
-            min-height: 600px;
             border: 3px solid;
             position: relative;
             overflow: hidden;
@@ -265,6 +354,8 @@
             clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0% 100%);
             padding-right: 50px;
             max-width: 90%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .company .details {
@@ -276,7 +367,7 @@
 
         .com_card {
             height: 220px;
-            min-width: 260px;
+            min-width: 400px;
             max-width: 500px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -286,18 +377,21 @@
             padding: 10px;
             border-radius: 6px;
             gap: 10px;
+            flex: 1;
         }
         .com_title {
             font-family: var(--poppins);
             font-size: 22px;
             font-weight: 600;
-            color: white;
+            color: var(--orange);
+            letter-spacing: 1px;
         }
         .com_det {
             font-family: var(--poppins);
             font-size: 16px;
             font-weight: 500;
             color: white;
+            letter-spacing: 1px;
         }
         
 
@@ -334,6 +428,22 @@
             background: var(--section-blue);
         }
 
+        @media (max-width: 500px) {
+            .company_title {
+                font-size: 25px;
+            }
+            .com_card {
+                min-height: 220px;
+                min-width: 200px;
+                width: 100%;
+            }
+            .com_title {
+                font-size: 18px;
+            }
+            .com_det {
+                font-size: 14px;
+            }
+        }
 
         
         
