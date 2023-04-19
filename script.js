@@ -173,3 +173,23 @@ images.forEach((img) => {
 });
 
 
+
+var fromRightToLeft_s = document.querySelectorAll('.fromRightToLeft')
+
+
+fromRightToLeft_s.forEach(item=>{
+    new ActivateInView(item)
+})
+
+var fromLeftToRight_s = document.querySelectorAll('.fromLeftToRight')
+
+
+fromLeftToRight_s.forEach(item=>{
+    new ActivateInView(item)
+})
+
+var fromDownToTop_s = document.querySelectorAll('.fromDownToTop')
+
+fromDownToTop_s.forEach(item=>{
+    new ActivateInView(item)
+})

@@ -39,35 +39,171 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 800px) {
-    .bg_bg .image_in_left img {
-        height: 100px;
-    }
-    .bg_bg .head_in_right {
-        font-size: 6vw;
-    }
+.cc11 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/gallery/g1.png);
+    background-position: 50% 70%;
+}
+.cc12 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/farming.jpg);
+    background-position: 50% 50%;
+}
+.cc13 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/mps.jpg);
+    background-position: 50% 40%;
 }
 
-@media (max-width: 700px) {
-
+.cc21 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/res.jpg);
+    background-position: 50% 30%;
+}
+.cc22 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/cleaning.webp);
+    background-position: 50% 50%;
+}
+.cc23 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/ftb.jpg);
+    background-position: 100% 50%;
 }
 
+.cc31 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/gallery/g2.png);
+    background-position: 50% 30%;
+}
+.cc32 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/generalTrading.jpg);
+    background-position: 50% 50%;
+}
+.cc33 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/generalMarchant.jpg);
+    background-position: 100% 50%;
+}
+
+.cc41 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/garment.webp);
+    background-position: 50% 50%;
+}
+.cc42 {
+    background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/IandEx.jpg);
+    background-position: 100% 50%;
+}
+
+
+.company {
+    border: 3px solid;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.company_title {
+    font-family: var(--poppins);
+    font-size: 35px;
+    font-weight: 700;
+    width: max-content;
+    padding: 15px 25px;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0% 100%);
+    padding-right: 50px;
+    max-width: 90%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.company .details {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.com_card {
+    height: 220px;
+    min-width: 400px;
+    max-width: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    border-radius: 6px;
+    gap: 10px;
+    flex: 1;
+}
+.com_title {
+    font-family: var(--poppins);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--orange);
+    letter-spacing: 1px;
+}
+.com_det {
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+.company.c1 {
+    border-color: var(--orange);
+}
+.company.c1 .company_title {
+    color: #ffdec1;
+    background: var(--orange);
+}
+
+.company.c2 {
+    border-color: var(--purple);
+}
+.company.c2 .company_title {
+    color: var(--purple-light);
+    background: var(--purple);
+}
+.company.c3 {
+    border-color: var(--section-lime);
+}
+.company.c3 .company_title {
+    color: var(--section-lime-light);
+    background: var(--section-lime);
+}
+.company.c4 {
+    border-color: var(--section-blue);
+}
+.company.c4 .company_title {
+    color: var(--section-blue-head);
+    background: var(--section-blue);
+}
 
 @media (max-width: 500px) {
+    .company_title {
+        font-size: 25px;
+    }
+    .com_card {
+        min-height: 220px;
+        min-width: 200px;
+        width: 100%;
+    }
+    .com_title {
+        font-size: 18px;
+    }
+    .com_det {
+        font-size: 14px;
+    }
     .bg_bg {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
@@ -80,4 +216,17 @@
             -ms-flex-direction: column;
                 flex-direction: column;
     }
+}
+
+@media (max-width: 800px) {
+    .bg_bg .image_in_left img {
+        height: 100px;
+    }
+    .bg_bg .head_in_right {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 700px) {
+
 }
