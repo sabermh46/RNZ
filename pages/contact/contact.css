@@ -37,7 +37,106 @@
 
 
 
+.theMap {
+    height: 450px;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 12px;
+    border: 3px solid white;
+    margin: 0 auto;
+}
+.theOffice {
+    height: 550px;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 12px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.theOffice img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+}
+.theText {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 20px;
+    font-family: var(--poppins);
+    color: white;
+    background: linear-gradient(transparent, black);
+    padding: 15px 25px;
+    letter-spacing: 1px;
+}
+.theText .head {
+    font-family: var(--poppins);
+    color: white;
+    font-size: 30px;
+    letter-spacing: 0px;
+}
 
+.theOffice, .theMap {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.423);
+}
+.exoticBtnContainer {
+    padding-bottom: 50px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.exoticBtn {
+    height: 100px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+.exoticBtn img {
+    height: inherit;
+}
+.exoticBtn .text {
+    color: white;
+    font-size: 30px;
+    font-family: var(--poppins);
+    font-weight: 600;
+}
+.exoticBtn::before, .exoticBtn::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    top: 0;
+    left: 0;
+}
+.exoticBtn::before {
+    background: #a5a5a5;
+}
+.exoticBtn::after {
+    z-index: -1;
+    transition: 1s ease;
+    left: -100%;
+}
+.exoticBtn.green::after {
+    background: var(--wa-color);
+}
+.exoticBtn.blue::after {
+    background: var(--section-blue);
+}
+.exoticBtn.orange::after {
+    background: var(--orange);
+}
+.exoticBtn:hover::after {
+    left: 0;
+}
 
 
 
@@ -67,7 +166,17 @@
 }
 
 @media (max-width: 700px) {
-
+    .exoticBtn {
+        height: 80px;
+        gap: 5px;
+    }
+    .exoticBtn img {
+        height: 100%;
+    }
+    .exoticBtn .text {
+        font-size: 16px;
+    }
+    
 }
 
 

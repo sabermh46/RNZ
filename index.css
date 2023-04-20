@@ -19,6 +19,7 @@ html {
     --section-lime-light: #EBF5AE;
     --purple: rgb(113, 50, 209);
     --purple-light: rgb(194, 154, 255);
+    --wa-color: #4DC95C;
 }
 
 * {
@@ -26,6 +27,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: var(--over-lock);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .h100 {
