@@ -90,6 +90,7 @@
     letter-spacing: 3px;
     color: var(--orange);
     text-shadow: 0px 2px 2px rgba(94, 94, 94, 0.37);
+    text-transform: capitalize;
 }
 .details .mid {
     color: #777777;
