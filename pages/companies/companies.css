@@ -1,3 +1,4 @@
+
 .background_section::after, .background_section::before {
     content: none !important;
 }
@@ -7,20 +8,32 @@
 
 
 .bg_bg {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: var(--max-width);
     width: calc(100% - 40px);
     margin: 0 auto;
     position: absolute;
     bottom: 10%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 .bg_bg div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .bg_bg .image_in_left img {
     height: 150px;
@@ -31,8 +44,9 @@
     color: rgba(255, 255, 255, 0.591);
     text-transform: uppercase;
     font-weight: 900;
-    /* text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.282); */
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 
@@ -40,59 +54,81 @@
 
 
 .cc11 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/gallery/g03.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
-    url(./../../pics/gallery/g1.png);
+    url(./../../pics/gallery/g03.jpg);
     background-position: 50% 70%;
 }
 .cc12 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/farming.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
     url(./../../pics/farming.jpg);
     background-position: 50% 50%;
 }
 .cc13 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/mps.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
     url(./../../pics/mps.jpg);
     background-position: 50% 40%;
 }
 
 .cc21 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/res.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
     url(./../../pics/res.jpg);
     background-position: 50% 30%;
 }
 .cc22 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/cleaning.webp);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
     url(./../../pics/cleaning.webp);
     background-position: 50% 50%;
 }
 .cc23 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/ftb.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
     url(./../../pics/ftb.jpg);
     background-position: 100% 50%;
 }
 
 .cc31 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/gallery/g04.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
-    url(./../../pics/gallery/g2.png);
+    url(./../../pics/gallery/g04.jpg);
     background-position: 50% 30%;
 }
 .cc32 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.7)),
+    url(./../../pics/generalTrading.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.7)),
     url(./../../pics/generalTrading.jpg);
     background-position: 50% 50%;
 }
 .cc33 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/generalMarchant.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
     url(./../../pics/generalMarchant.jpg);
     background-position: 100% 50%;
 }
 
 .cc41 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/garment.webp);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
     url(./../../pics/garment.webp);
     background-position: 50% 50%;
 }
 .cc42 {
+    background: -o-linear-gradient(260deg, transparent, rgba(0,0,0,0.8)),
+    url(./../../pics/IandEx.jpg);
     background: linear-gradient(190deg, transparent, rgba(0,0,0,0.8)),
     url(./../../pics/IandEx.jpg);
     background-position: 100% 50%;
@@ -110,9 +146,12 @@
     font-family: var(--poppins);
     font-size: 35px;
     font-weight: 700;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding: 15px 25px;
-    clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0% 100%);
     padding-right: 50px;
     max-width: 90%;
     letter-spacing: 1px;
@@ -121,9 +160,12 @@
 
 .company .details {
     padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .com_card {
@@ -132,13 +174,22 @@
     max-width: 500px;
     background-size: cover;
     background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding: 10px;
     border-radius: 6px;
     gap: 10px;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .com_title {
     font-family: var(--poppins);
@@ -225,8 +276,4 @@
     .bg_bg .head_in_right {
         font-size: 6vw;
     }
-}
-
-@media (max-width: 700px) {
-
 }

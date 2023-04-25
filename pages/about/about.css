@@ -1,5 +1,4 @@
 
-
 .background_section::after, .background_section::before {
     content: none !important;
 }
@@ -9,20 +8,32 @@
 
 
 .bg_bg {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: var(--max-width);
     width: calc(100% - 40px);
     margin: 0 auto;
     position: absolute;
     bottom: 10%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 .bg_bg div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .bg_bg .image_in_left img {
     height: 150px;
@@ -34,7 +45,9 @@
     text-transform: uppercase;
     font-weight: 900;
     /* text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.282); */
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 
@@ -42,6 +55,7 @@
 
 
 .owers_card {
+    background: -o-linear-gradient(45deg,#f3eae2 40%, #e6b385);
     background: linear-gradient(45deg,#f3eae2 40%, #e6b385);
 
     border-radius: 16px;
@@ -49,8 +63,12 @@
     position: relative;
     padding: 30px 40px;
     padding-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 40px;
 }
 .owers_card .post {
@@ -78,10 +96,19 @@
 }
 .owers_card .details {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
-    justify-content: center;
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
     gap: 20px;
 }
 .details .title {
@@ -108,22 +135,32 @@
 }
 
 .md_card_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .md_card {
+    background: -o-linear-gradient(45deg,#f3eae2 40%, #ffd0a6);
     background: linear-gradient(45deg,#f3eae2 40%, #ffd0a6);
     border-radius: 12px;
     overflow: hidden;
     position: relative;
     padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 20px;
     /* width: calc(50% - 10px); */
     min-width: 400px;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .md_card .post {
     position: absolute;
@@ -146,7 +183,8 @@
     height: 150px;
     width: 150px;
     border-radius: 1000px;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.334);
+    -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.334);
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.334);
 }
 .md_card .left .image img {
     height: 100%;
@@ -155,10 +193,19 @@
 .md_card .right {
     padding-top: 30px;
     height: 100%;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .md_title {
     font-size: 28px;
@@ -169,6 +216,8 @@
 }
 a.md_email {
     height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-decoration: none;
     color: black;
@@ -177,6 +226,8 @@ a.md_email {
     letter-spacing: 1px;
     gap: 5px;
     line-height: 22px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     border-radius: 4px;
     padding: 5px;
@@ -187,9 +238,6 @@ a.md_email:hover {
 a.md_email img {
     height: 100%;
 }
-
-
-
 
 
 
@@ -209,8 +257,12 @@ a.md_email img {
     .owers_card {
         padding: 20px;
         padding-top: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 40px;
     }
     .owers_card .post {
@@ -263,18 +315,30 @@ a.md_email img {
 
 @media (max-width: 500px) {
     .bg_bg {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .owers_card {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 20px;
     }
     .owers_card .post {
         width: 90%;
         right: 50%;
-        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+            -ms-transform: translateX(50%);
+                transform: translateX(50%);
         text-align: center;
         line-height: 16px;
         letter-spacing: 1px;
@@ -290,12 +354,17 @@ a.md_email img {
     .md_card {
         min-width: 250px;
         padding-top: 50px;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .md_card .post {
         width: 90%;
         right: 50%;
-        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+            -ms-transform: translateX(50%);
+                transform: translateX(50%);
         text-align: center;
         line-height: 16px;
         letter-spacing: 1px;

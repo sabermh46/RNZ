@@ -1,5 +1,4 @@
 
-
 .h500onCC {
     height: 50px;
 }
@@ -7,14 +6,18 @@
 
 .section5 {
     min-height: 110vh;
+    background: -o-linear-gradient(45deg,rgb(79, 79, 255), skyblue);
     background: linear-gradient(45deg,rgb(79, 79, 255), skyblue);
     padding-top: 90px;
     position: relative;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 .head5 {
     font-size: 50px;
     z-index: 5;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     max-width: 90%;
     position: relative;
@@ -71,20 +74,36 @@
     background: rgb(30, 78, 162);
     left: -25px;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: rgb(186, 228, 255);
 }
 
 .iconText {
     border-radius: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 20px;
     padding: 7px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     background: rgba(255, 255, 255, 0.164);
     padding-right: 20px;
@@ -131,56 +150,106 @@
     height: 40%;
     top: 10%;
     left: 20%;
-    animation: cloudMove 4s linear 0s infinite;
+    -webkit-animation: cloudMove 4s linear 0s infinite;
+            animation: cloudMove 4s linear 0s infinite;
 }
 .the_air_frame .cl2 {
     height: 20%;
     top: 40%;
     left: 0;
-    animation: cloudMove 4s linear 1s infinite;
+    -webkit-animation: cloudMove 4s linear 1s infinite;
+            animation: cloudMove 4s linear 1s infinite;
 }
 .the_air_frame .cl3 {
     height: 50%;
     right: 0;
     bottom: 10px;
-    animation: cloudMove 4s linear 2s infinite;
+    -webkit-animation: cloudMove 4s linear 2s infinite;
+            animation: cloudMove 4s linear 2s infinite;
 }
 .the_air_frame .plane {
     height: 70%;
     right: 0%;
     bottom: 20%;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 .the_air_frame .plane.active {
     right: 20%;
-    transform: rotate(10deg);
-    animation: planeMove 4s linear 1s infinite;
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
+    -webkit-animation: planeMove 4s linear 1s infinite;
+            animation: planeMove 4s linear 1s infinite;
+}
+
+@-webkit-keyframes cloudMove {
+    0%, 100% {
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+    }
+    25% {
+        -webkit-transform: translate(5px, -10px);
+                transform: translate(5px, -10px);
+    }
+    75% {
+        -webkit-transform: translate(0px, 10px);
+                transform: translate(0px, 10px);
+    }
 }
 
 @keyframes cloudMove {
     0%, 100% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
     }
     25% {
-        transform: translate(5px, -10px);
+        -webkit-transform: translate(5px, -10px);
+                transform: translate(5px, -10px);
     }
     75% {
-        transform: translate(0px, 10px);
+        -webkit-transform: translate(0px, 10px);
+                transform: translate(0px, 10px);
+    }
+}
+@-webkit-keyframes planeMove {
+    0%, 100% {
+        -webkit-transform: translate(0px, 0px) rotate(10deg);
+                transform: translate(0px, 0px) rotate(10deg);
+    }
+    25% {
+        -webkit-transform: translate(-5px, -10px) rotate(13deg);
+                transform: translate(-5px, -10px) rotate(13deg);
+    }
+    50% {
+        -webkit-transform: translate(-15px, 5px) rotate(8deg);
+                transform: translate(-15px, 5px) rotate(8deg);
+    }
+    75% {
+        -webkit-transform: translate(2px, 10px) rotate(10deg);
+                transform: translate(2px, 10px) rotate(10deg);
     }
 }
 @keyframes planeMove {
     0%, 100% {
-        transform: translate(0px, 0px) rotate(10deg);
+        -webkit-transform: translate(0px, 0px) rotate(10deg);
+                transform: translate(0px, 0px) rotate(10deg);
     }
     25% {
-        transform: translate(-5px, -10px) rotate(13deg);
+        -webkit-transform: translate(-5px, -10px) rotate(13deg);
+                transform: translate(-5px, -10px) rotate(13deg);
     }
     50% {
-        transform: translate(-15px, 5px) rotate(8deg);
+        -webkit-transform: translate(-15px, 5px) rotate(8deg);
+                transform: translate(-15px, 5px) rotate(8deg);
     }
     75% {
-        transform: translate(2px, 10px) rotate(10deg);
+        -webkit-transform: translate(2px, 10px) rotate(10deg);
+                transform: translate(2px, 10px) rotate(10deg);
     }
 }
 
@@ -198,10 +267,13 @@
     background-position: 20% 80%;
     background-attachment: fixed;
     background-size: 300px;
+    padding-bottom: 50px;
 }
 
 .floating2 {
     height: 50px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding: 5px 25px;
     letter-spacing: 2px;
@@ -228,14 +300,20 @@
 
 
 .development_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 30px;
 }
 .development_section .left {
     position: sticky;
     top: 160px;
-    align-self: flex-start;
-    flex: 4;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+    overflow: hidden;
 }
 .development_section .left .project_title {
     font-size: 28px;
@@ -256,7 +334,9 @@
 
 
 .development_section .right {
-    flex: 5;
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
 }
 .development_section .right .pics {
     width: 100%;
@@ -267,9 +347,11 @@
 }
 .development_section .right .pics img {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.446);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.246);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.246);
 }
 
 
@@ -285,18 +367,25 @@
 
 
 .section3 .main3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 
 
 
 .section3 .main3 .left {
-    position: -webkit-sticky;
     position: sticky;
     top: 120px;
-    align-self: flex-start;
-    flex: 4;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    overflow: hidden;
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
 }
 .section3 .main3 .left img.floating {
     position: absolute;
@@ -314,6 +403,8 @@
 
 .section3 .floating1 {
     height: 50px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding: 5px 25px;
     letter-spacing: 2px;
@@ -332,7 +423,9 @@
 .section3 .main3 .right {
     z-index: 10;
     padding: 10px;
-    flex: 5;
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
 }
 
 .subheading {
@@ -349,6 +442,8 @@ ul.food_items {
 }
 ul.food_items li {
     width: calc(100% - 20px);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(222, 222, 222, 0.145)), to(rgba(255, 255, 255, 0.05)));
+    background: -o-linear-gradient(rgba(222, 222, 222, 0.145), rgba(255, 255, 255, 0.05));
     background: linear-gradient(rgba(222, 222, 222, 0.145), rgba(255, 255, 255, 0.05));
     border-radius: 6px;
     color: rgb(216, 228, 252);
@@ -368,9 +463,14 @@ ul.food_items li {
 
 
 div.hudai {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 20px;
 }
 
@@ -386,7 +486,8 @@ div.hudai {
     height: 240px;
     overflow: hidden;
     border-radius: 14px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.446);
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.246);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.246);
 }
 .food_img_card .img img {
     width: 100%;
@@ -394,10 +495,16 @@ div.hudai {
 .food_img_card .title {
     height: 60px;
     padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-weight: 700;
     line-height: 25px;
     font-size: 20px;
@@ -411,6 +518,8 @@ div.hudai {
 
 
 .section2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
 }
@@ -426,25 +535,27 @@ div.hudai {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: -1;
 }
 .section2 .subsection {
     height: 500px;
     width: 50%;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 .section2 .subsection .company_card_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     position: relative;
-    transform: translateY(100px);
-    transition: 1s cubic-bezier(.5,.26,.55,1.32);
 }
-.section2 .subsection .company_card_container.active {
-    transform: translateY(0px);
-}
+
 
 .subsection .company_card_container::before {
     content: '';
@@ -455,7 +566,9 @@ div.hudai {
     position: absolute;
 
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     right: 35px;
 }
 .subsection .company_card_container::after {
@@ -465,7 +578,9 @@ div.hudai {
     background: var(--front-line-color);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     right: 0px;
 }
 .subsection.right .company_card_container::before {
@@ -476,30 +591,30 @@ div.hudai {
 }
 
 .subsection .company_card_container .company_card {
-
     width: calc(100% - 50px);
     background: rgb(255, 255, 255, 0.4);
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+    -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
     border: 1px solid rgba(255, 255, 255, 0.743);
     border-radius: 12px;
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
     padding: 25px;
     top: 0;
-
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 15px;
-    align-items: center;
-
-    backface-visibility: hidden;
-    perspective: 1000;
-    transform: translate3d(0,0,0);
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
 }
 
 .subsection.right .company_card_container {
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 }
 
 
@@ -507,14 +622,26 @@ div.hudai {
 
 .subsection .company_card_container .company_card .content {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 10px;
 }
 .subsection .company_card_container .company_card .content.picture {
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 20;
 }
 .subsection .company_card_container .company_card .content > img {
     height: 150px;
@@ -530,22 +657,32 @@ div.hudai {
 }
 
 .icon_items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 5px;
+    z-index: 10;
 }
 .icon_items .icon_item {
     background: #c5c5c58d;
     border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 10px;
     font-family: var(--poppins);
     font-weight: 700;
     padding: 5px 10px;
     font-size: 14px;
     line-height: 16px;
-    transition: 0.5s;
+    -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
 }
 .icon_items .icon_item:hover {
     background: #a5a5a5b9;
@@ -557,8 +694,11 @@ div.hudai {
 .icon_items .icon_item div img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    transform: scale(0.9);
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
 }
 
 
@@ -571,7 +711,10 @@ div.hudai {
     }
 
     .section2 {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         min-width: 200px;
     }
     .section2 .subsection {
@@ -579,17 +722,16 @@ div.hudai {
     }
     
     .section2 .subsection .company_card_container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
-        justify-content: right;
+        -webkit-box-pack: right;
+            -ms-flex-pack: right;
+                justify-content: right;
         position: relative;
-        transform: translateY(100px);
-        transition: 1s cubic-bezier(.5,.26,.55,1.32);
     }
-    .section2 .subsection .company_card_container.active {
-        transform: translateY(0px);
-    }
-    
+
     .subsection .company_card_container::before {
         left: 35px;
     }
@@ -601,13 +743,17 @@ div.hudai {
     
         width: calc(100% - 50px);
         background: rgb(255, 255, 255, 0.4);
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+        -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
         border: 1px solid rgba(255, 255, 255, 0.743);
         padding: 10px;
-    
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 15px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     
     
@@ -615,9 +761,16 @@ div.hudai {
     
     .subsection .company_card_container .company_card .content {
         height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 10px;
     }
     .subsection .company_card_container .company_card .content > img {
@@ -626,22 +779,31 @@ div.hudai {
     }
 
     .icon_items {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 5px;
     }
     .icon_items .icon_item {
         background: #c5c5c58d;
         border-radius: 8px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 10px;
         font-family: var(--poppins);
         font-weight: 500;
         padding: 5px 10px;
         font-size: 12px;
         line-height: 14px;
-        transition: 0.5s;
     }
     .icon_items .icon_item div {
         height: 25px;
@@ -656,12 +818,20 @@ div.hudai {
     
         width: calc(100% - 50px);
         background: rgb(255, 255, 255, 0.4);
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+        -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.362);
         border: 1px solid rgba(255, 255, 255, 0.743);
         padding: 10px;
     
+        display: -webkit-box;
+    
+        display: -ms-flexbox;
+    
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .subsection .company_card_container .company_card .content > img {
         height: 110px;
@@ -678,17 +848,25 @@ div.hudai {
 
         
     .section3 .main3 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 50px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .section3 .main3 .left {
         top: 0;
         width: 100%;
         position: relative;
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     }
     .section3 .main3 .left img.floating {
         max-width: 200px;
@@ -704,7 +882,9 @@ div.hudai {
     .section3 .main3 .right {
         z-index: 10;
         padding: 0px;
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     }
 
     .subheading {
@@ -730,7 +910,8 @@ div.hudai {
     div.hudai {
         gap: 10px;
         row-gap: 20px;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     .food_img_card {
         width: 47%;
@@ -752,12 +933,19 @@ div.hudai {
         height: 0;
         min-height: 40px;
         padding: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
-        justify-content: center;
-        font-weight: 500;
-        line-height: 20px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 14px;
         font-size: 14px;
         font-family: var(--poppins);
         color: var(--section-blue);
@@ -768,6 +956,7 @@ div.hudai {
     .section4 .main4 {
         background-position: 50% 50%;
         background-size: 250px;
+        padding-bottom: 0px;
     }
 
     .floating2 {
@@ -788,15 +977,22 @@ div.hudai {
 
 
     .development_section {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 30px;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding-bottom: 50px;
     }
     .development_section .left {
         position: relative;
         top: 0;
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     }
     .development_section .left .project_title {
         font-size: 18px;
@@ -809,7 +1005,9 @@ div.hudai {
 
 
     .development_section .right {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     }
     .development_section .right .pics {
         width: 100%;
@@ -817,9 +1015,11 @@ div.hudai {
     }
     .development_section .right .pics img {
         width: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         border-radius: 10px;
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.446);
+        -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.446);
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.446);
     }
 
 
@@ -827,6 +1027,7 @@ div.hudai {
 
     .section5 {
         min-height: 110vh;
+        background: -o-linear-gradient(45deg,rgb(79, 79, 255), skyblue);
         background: linear-gradient(45deg,rgb(79, 79, 255), skyblue);
         padding-top: 90px;
         position: relative;
@@ -876,7 +1077,9 @@ div.hudai {
     .iconText {
         gap: 10px;
         padding-right: 10px;
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         width: 100%;
     }
     .iconText img {

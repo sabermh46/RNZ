@@ -1,5 +1,4 @@
 
-
 .background_section::after, .background_section::before {
     content: none !important;
 }
