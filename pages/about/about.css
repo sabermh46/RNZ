@@ -238,7 +238,31 @@ a.md_email:hover {
 a.md_email img {
     height: 100%;
 }
-
+a.email {
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: var(--poppins);
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg,  rgba(255, 136, 0, 0.578), transparent);
+    gap: 5px;
+    line-height: 22px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 4px;
+    padding: 5px;
+}
+a.email:hover {
+    color: #000000;
+}
+a.email img {
+    height: 100%;
+}
 
 
 
