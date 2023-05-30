@@ -101,7 +101,7 @@
     background: rgba(0, 0, 0, 0.15);
 }
 .full_width {
-    width: 100%;
+    min-width: 100%;
     aspect-ratio: auto;
     padding: 25px 20px;
     font-size: 16px;
